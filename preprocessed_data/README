@@ -1,0 +1,32 @@
+train_data.npy - A numpy list of length number of utterances (currently 25).
+Each item in the list is a numpy list of dimension (timestep, 40) where 40 represents the number of mel features
+after generating the melspectograms during feature engineering.
+
+dev_data.npy - A numpy list of length number of utterances (currently 8).
+Each item in the list is a numpy list of dimension (timestep, 40) where 40 represents the number of mel features
+after generating the melspectograms during feature engineering.
+
+test_data.npy - A numpy list of length number of utterances (currently 2).
+Each item in the list is a numpy list of dimension (timestep, 40) where 40 represents the number of mel features
+after generating the melspectograms during feature engineering.
+
+train_labels.npy - A numpy list of length number of utterances (currently 25).
+Each item in the list is a numpy list of dimension (timestep, ) where the value at each timestep/frame is an integer
+where 0 denotes silence and any number greater than 0 is the integer mapping of the respective phoneme
+
+dev_labels.npy - A numpy list of length number of utterances (currently 8).
+Each item in the list is a numpy list of dimension (timestep, ) where the value at each timestep/frame is an integer
+where 0 denotes silence and any number greater than 0 is the integer mapping of the respective phoneme
+
+test_labels.npy - A numpy list of length number of utterances (currently 2).
+Each item in the list is a numpy list of dimension (timestep, ) where the value at each timestep/frame is an integer
+where 0 denotes silence and any number greater than 0 is the integer mapping of the respective phoneme
+
+utilities.py - A Python file containing the utilities necessary for data engineering required during model building
+and training. Currently contains a dictionary called PHONEME_MAPPER that maps the integer representation of each phoneme
+present in each frame labels to it's respective phoneme string. (e.g 0 maps to 'SIL' or Silence and 1 maps to 'AE').
+For ease of understanding the ascending order of the integer index also map to the ascending lexicographic order of the
+phonemes except for 0 which denotes silence.
+
+
+
