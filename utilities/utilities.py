@@ -49,7 +49,7 @@ SPECIALIZED_TASKS = {
         1: ['AW']
     },
     '11_mm_vs_nn': {
-        0: ['AH'],
-        1: ['AW']
+        0: ['MM'],
+        1: ['NN']
     },
 }
