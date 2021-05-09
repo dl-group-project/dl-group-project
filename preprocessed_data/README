@@ -22,11 +22,18 @@ test_labels.npy - A numpy list of length number of utterances (currently 2).
 Each item in the list is a numpy list of dimension (timestep, ) where the value at each timestep/frame is an integer
 where 0 denotes silence and any number greater than 0 is the integer mapping of the respective phoneme
 
+phoneme_train_features.npy - The training data features (melspectograms) for the respective phoneme.
+phoneme_dev_features.npy - The validation data features (melspectograms) for the respective phoneme.
+phoneme_test_features.npy - The testing data features (melspectograms) for the respective phoneme.
+
+phoneme_train_labels.npy - The frame level training data labels for the respective phoneme.
+phoneme_dev_labels.npy - The frame level validation data labels for the respective phoneme.
+phoneme_test_labels.npy - The frame level testing data labels for the respective phoneme.
+
+
 utilities.py - A Python file containing the utilities necessary for data engineering required during model building
 and training. Currently contains a dictionary called PHONEME_MAPPER that maps the integer representation of each phoneme
 present in each frame labels to it's respective phoneme string. (e.g 0 maps to 'SIL' or Silence and 1 maps to 'AE').
-For ease of understanding the ascending order of the integer index also map to the ascending lexicographic order of the
-phonemes except for 0 which denotes silence.
 
 
 
