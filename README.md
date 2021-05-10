@@ -38,7 +38,7 @@ It also contains dictionaries to support categories for our various classificiat
 
 7 evaluation - This folder contains sub folders which has code to evaluate our detectors and classifiers as well as the respective updated reports.
 
-10 reports - This folder contains our project reports
+8 reports - This folder contains our project reports
 
 9 voice_detection - This folder contains some of our initial voice activity detection code which was not finally used.
 
